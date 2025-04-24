@@ -24,8 +24,26 @@ lgpio.gpio_claim_output(h,IN2)
 lgpio.gpio_claim_output(h,IN3)
 lgpio.gpio_claim_output(h,IN4)
 lgpio.gpio_write(h, ENA, 1)
-lgpio.gpio_write(h, IN1, 1)
-lgpio.tx_pwm(h, ENA, 10000, 50)  # Motor A: 10kHz, 50% speed
-time.sleep(5)
-lgpio.tx_pwm(h, ENA, 10000, 0)  # Motor A: 10kHz, 50% speed
+lgpio.gpio_write(h, ENB, 1)
+if (args.left_velocity >= 0 and args.right_velocity >= 0):
+    lgpio.gpio_write(h, IN1, 1)
+    lgpio.tx_pwm(h, ENA, 10000, args.right_velocity)
+    lgpio.gpio_write(h, IN3, 1)
+    lgpio.tx_pwm(h, ENB, 10000, args.left_velocity)
+elif (args.left_velocity < 0 and args.right_velocity >= 0):
+    lgpio.gpio_write(h, IN1, 1)
+    lgpio.tx_pwm(h, ENA, 10000, args.right_velocity)
+    lgpio.gpio_write(h, IN4, 1)
+    lgpio.tx_pwm(h, ENB, 10000, args.left_velocity)
+elif (args.left_velocity >= 0 and args.right_velocity < 0):
+    lgpio.gpio_write(h, IN2, 1)
+    lgpio.tx_pwm(h, ENA, 10000, args.right_velocity)
+    lgpio.gpio_write(h, IN3, 1)
+    lgpio.tx_pwm(h, ENB, 10000, args.left_velocity)
+else:
+    lgpio.gpio_write(h, IN2, 1)
+    lgpio.tx_pwm(h, ENA, 10000, args.right_velocity)
+    lgpio.gpio_write(h, IN4, 1)
+    lgpio.tx_pwm(h, ENB, 10000, args.left_velocity)
+
 

@@ -1,0 +1,24 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/med-islam/Desktop/test/build/my_bot",
+        "/home/med-islam/Desktop/test/install/my_bot/lib/python3.10/site-packages",
+        "/home/med-islam/ros2_ws/build/my_robot_controller",
+        "/home/med-islam/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages",
+        "/home/med-islam/Desktop/ROS2_INT1/install/my_bot/local/lib/python3.10/dist-packages",
+        "/home/med-islam/ros2_ws2/install/actions_py/lib/python3.10/site-packages",
+        "/home/med-islam/ros2_ws2/install/my_robot_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/med-islam/Desktop/test/build/my_bot",
+        "/home/med-islam/Desktop/test/install/my_bot/lib/python3.10/site-packages",
+        "/home/med-islam/ros2_ws/build/my_robot_controller",
+        "/home/med-islam/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages",
+        "/home/med-islam/Desktop/ROS2_INT1/install/my_bot/local/lib/python3.10/dist-packages",
+        "/home/med-islam/ros2_ws2/install/actions_py/lib/python3.10/site-packages",
+        "/home/med-islam/ros2_ws2/install/my_robot_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

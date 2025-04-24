@@ -18,7 +18,7 @@ class Control(Node):
         r_left_wheel_vel=round(msg.velocity[1])
         print("passed value for right wheel : "+str(right_wheel_vel))
         print("passed value for right wheel : "+str(left_wheel_vel))
-        #os.system("sudo python3 /home/med-islam/Desktop/work/PFE/src/my_bot/my_bot/forward.py "+str(left_wheel_vel)+" "+str(right_wheel_vel))
+        os.system("sudo python3 /home/pfe/work/src/my_bot/move.py "+str(left_wheel_vel)+" "+str(right_wheel_vel))
 
 def main (args=None):
     rclpy.init(args=args)

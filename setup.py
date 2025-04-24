@@ -28,6 +28,7 @@ setup(
     entry_points={
         'console_scripts': [
             "control_node = my_bot.my_control:main",
+            "object_tracker = my_bot.object_tracker:main"
         ],
     },
 )
